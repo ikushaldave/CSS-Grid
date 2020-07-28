@@ -1,0 +1,66 @@
+html {
+	box-sizing: border-box;
+	font-size: 15px;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+body {
+	font: 300 1rem/1.8 $font-family;
+}
+
+@mixin grid($num, $size) {
+	display: grid;
+	grid-template-columns: repeat($num, $size);
+}
+
+@mixin justify-align($justify-items, $align-items) {
+	place-items: $justify-items $align-items;
+}
+
+@mixin grid-span($num) {
+	grid-column: span $num;
+}
+
+//flex
+
+.flex {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	// align-items: center;
+}
+
+.col-1-2 {
+	flex: 0 1 50%;
+}
+
+//grid
+
+.grid {
+	@include grid(4, 1fr);
+}
+
+.justify-align-center {
+	@include justify-align(center, center);
+}
+
+.span-2 {
+	@include grid-span(2);
+}
+
+// additional
+
+img {
+	display: block;
+	width: 100%;
+	object-fit: cover;
+}
+
+.padding {
+	padding: 2.5rem;
+}

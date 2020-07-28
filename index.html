@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+    <link rel="stylesheet" href="./assests/stylesheets/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="grid justify-align-center">
+            <a class="brand-logo span-2" href="#">
+                <h2>Stimulus</h2>
+            </a>
+            <nav class="nav span-2">
+                <ul class="nav-items flex">
+                    <li class="nav-item"><a class="active" href="#">Home</a></li>
+                    <li class="nav-item"><a href="#">About Me</a></li>
+                    <li class="nav-item"><a href="#">Experiences</a></li>
+                    <li class="nav-item"><a href="#">Testimonials</a></li>
+                    <li class="nav-item"><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- hero section -->
+
+        <section class="hero grid justify-align-center">
+            <figure class="hero__img span-2">
+                <img src="./assests/images/home-img.jpg" alt="hero-img">
+            </figure>
+            <div class="hero__text span-2 padding">
+                <h3 class="hero__sub_heading">Welcome to my website</h3>
+                <h1 class="hero__heading">Hello, I am <strong>Stimulus</strong> currently based in New York city.</h1>
+                <p class="hero__paragraph">Donec auctor arcu at efficitur lacinia. Praset bibendum elicursum et mattis
+                    tellus interdum in.
+                    Utadictum purus.
+                    Vestibulum non pellentesque felis, sed dignissim urna Vestibulum id accumsan quaim.</p>
+                <a href="#" class="btn">Get Started</a>
+            </div>
+        </section>
+
+        <section class="about-us grid justify-align-center">
+            <div class="about__text span-2 padding">
+                <h2>Donec auctor</h2>
+                <h3>Sed yulputate vitae diam quis bibendum</h3>
+                <p>Phasellus vulputate tellus nec tortorvarius elementum Curabitur at pulvinar ante. Duis dui urna,
+                    faucibus eget felis eu
+                    iaculis congue sem. Mauris convallis erOS massa.</p>
+                <p>Quisque vivus iaculis aliquam Etiam volutpat, justo
+                    non aliquam
+                    bibendum, sem nibh mollis eratquis porta odio dicator.</p>
+            </div>
+            <div class="my-skills grid span-2 justify-align-center">
+                <figure class="col-1-2 span-2">
+                    <img src="./assests/images/about-img.jpg" alt="about-img">
+                </figure>
+                <div class="skills-list span-2 padding">
+                    <h2>My Skills</h2>
+                    <p>Photoshop, HTML CSS JS, Web Design</p>
+                    <div class="progress-bar flex">
+                        <h3>Frontend Design</h3>
+                        <span>90%</span>
+                        <div class="total-indicator">
+                            <div class="fd"></div>
+                        </div>
+                    </div>
+                    <div class="progress-bar flex">
+                        <h3>Backend Processing</h3>
+                        <span>70%</span>
+                        <div class="total-indicator">
+                            <div class="bp"></div>
+                        </div>
+                    </div>
+                    <div class="progress-bar flex">
+                        <h3>HTML5 & CSS3</h3>
+                        <span>80%</span>
+                        <div class="total-indicator">
+                            <div class="hc"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="my-work grid">
+            <div class="work interface">
+                <i class="fas fa-desktop"></i>
+                <h2>Interface Design</h2>
+                <p>Phasellus vulputate tellus nec tortor varius elementum. Curabitur at pulvinar ante.</p>
+            </div>
+            <div class="work media">
+                <i class="fas fa-paper-plane"></i>
+                <h2>Media Strategy</h2>
+                <p>Phasellus vulputate tellus nec tortor varius elementum. Curabitur at pulvinar ante.</p>
+            </div>
+            <div class="work mobile-app">
+                <i class="fas fa-calendar-alt"></i>
+                <h2>Mobile App</h2>
+                <p>Phasellus vulputate tellus nec tortor varius elementum. Curabitur at pulvinar ante.</p>
+            </div>
+            <div class="work coding">
+                <i class="fab fa-html5"></i>
+                <h2>Coding</h2>
+                <p>Phasellus vulputate tellus nec tortor varius elementum. Curabitur at pulvinar ante.</p>
+            </div>
+        </section>
+
+        <section class="my-experience grid justify-align-center">
+            <figure class="span-2">
+                <img src="./assests/images/experience-img.jpg" alt="experience-img">
+            </figure>
+            <div class="experience span-2">
+                <h2>My Experiences</h2>
+                <h3>Previous companies and my tasks</h3>
+                <div class="flex">
+                    <i class="fas fa-laptop"></i>
+                    <div>
+                        <h4>Graphic Designer <span class="time-period">2014 Jul - 2015 Sep</span></h4>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+                <div class="flex">
+                    <i class="fas fa-laptop"></i>
+                    <div class="details">
+                        <h4>Web Designer <span class="time-period">2015 Oct - 2017 Jan</span></h4>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="my-education grid justify-align-center">
+            <div class="education span-2">
+                <h2>My Education</h2>
+                <h3>Previous companies and my tasks</h3>
+                <div class="flex">
+                    <i class="fas fa-laptop"></i>
+                    <div>
+                        <h4>Master in Design <span class="time-period">2012 Jan - 2014 May</span></h4>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+                <div class="flex">
+                    <i class="fas fa-laptop"></i>
+                    <div class="details">
+                        <h4>Bachelor of Arts <span class="time-period">2015 May - 2011 Dec</span></h4>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+            </div>
+            <figure class="span-2">
+                <img src="./assests/images/education-img.jpg" alt="education-img">
+            </figure>
+        </section>
+
+        <section class="reach-us grid justify-align-center">
+            <div class="contact-form span-2 padding">
+                <h2>Say hello..</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+                <form action="#">
+                    <input type="text" placeholder="Your Name" name="name">
+                    <input type="text" placeholder="Your Email" name="name">
+                    <textarea name="message" placeholder="Write your message..." rows="5"></textarea>
+                    <button class="btn">Send</button>
+                </form>
+            </div>
+            <div class="address span-2 grid">
+                <figure class="span-2">
+                    <img src="./assests/images/contact-img.jpg" alt="contact-img">
+                </figure>
+                <div class="address__text span-2 padding">
+                    <h2>Visit my office</h2>
+                    <p>456 New Street 22000, New York City, USA</p>
+                    <div class="contact">
+                        <h2>Contact.</h2>
+                        <a href="tel:+0123 456"><i class="fas fa-phone-volume"></i> 01-0110-0220</a>
+                        <a href="mailto:hello@company.co"><i class="fas fa-envelope-square"></i> hello@company.co</a>
+                        <a href="#"><i class="fas fa-globe-europe"></i> company.co</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+</body>
+
+</html>

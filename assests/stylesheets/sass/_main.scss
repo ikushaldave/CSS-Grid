@@ -1,0 +1,178 @@
+.hero {
+	background-color: $bg-pink;
+	color: $paragraph-color;
+
+	.hero__img img {
+		width: 100%;
+		object-fit: cover;
+		height: 740px;
+	}
+
+	.hero__heading {
+		margin: 1.2rem 0;
+		line-height: 1.4;
+	}
+
+	.hero__sub_heading {
+		font-size: 0.8rem;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		font-weight: 600;
+	}
+
+	.btn {
+		margin-top: 4rem;
+	}
+}
+
+// about
+
+.about__text {
+	h3 {
+		color: #cc9946;
+	}
+}
+
+.my-skills {
+	background-color: #ecaf4e;
+
+	h2,
+	h3,
+	p,
+	span {
+		color: #fff;
+	}
+
+	h3 {
+		font-weight: 600;
+		color: #000;
+		margin-bottom: 0.5rem;
+	}
+
+	img {
+		height: 350px;
+	}
+
+	.progress-bar {
+		margin-bottom: 1rem;
+	}
+
+	.total-indicator {
+		width: 100%;
+		background-color: #fff;
+	}
+
+	.fd,
+	.bp,
+	.hc {
+		width: 90%;
+		height: 2.5px;
+		background-color: #000;
+	}
+
+	.bp {
+		width: 70%;
+	}
+
+	.hc {
+		width: 80%;
+	}
+}
+
+// my-work
+
+.work {
+	text-align: center;
+	padding: 2rem;
+
+	i,
+	h2,
+	p {
+		color: #fff;
+	}
+
+	i {
+		font-size: 3rem;
+		margin-bottom: 3rem;
+	}
+
+	h2 {
+		font-size: 1.5rem;
+		margin-bottom: 1.5rem;
+	}
+}
+
+.interface {
+	background-color: #ecaf4e;
+}
+
+.media {
+	background-color: #fc683e;
+}
+
+.mobile-app {
+	background-color: #161616;
+}
+
+.coding {
+	background-color: #ffffff;
+
+	i,
+	h2,
+	p {
+		color: #000;
+	}
+}
+
+// My-Experiences
+
+.my-experience {
+	background-color: #fc683e;
+}
+
+.experience {
+	justify-self: start;
+	padding: 2.5rem 5rem;
+
+	h2,
+	h4,
+	p,
+	i {
+		color: #fff;
+		line-height: 1.5;
+	}
+
+	h3 {
+		color: rgba(255, 255, 255, 0.5);
+	}
+
+	.time-period {
+		font-size: 1rem;
+		color: #713234;
+		font-weight: 600;
+		margin-left: 1rem;
+	}
+
+	& > div {
+		margin-top: 1rem;
+
+		& > div {
+			margin-left: 2rem;
+		}
+	}
+
+	i {
+		display: inline-block;
+		font-size: 2.5rem;
+	}
+}
+
+// Education
+
+.my-education {
+	background-color: #ecaf4e;
+}
+
+.education {
+	@extend .experience;
+}
