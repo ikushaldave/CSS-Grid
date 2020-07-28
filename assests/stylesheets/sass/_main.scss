@@ -176,3 +176,84 @@
 .education {
 	@extend .experience;
 }
+
+// reach-us
+
+.reach-us {
+	background-color: #fc683e;
+
+	h2,
+	p,
+	input,
+	textarea,
+	a {
+		color: #fff;
+		font-family: $font-family;
+	}
+}
+
+.contact-form {
+	form {
+		margin-top: 3rem;
+	}
+
+	input,
+	textarea {
+		font-size: 1.1rem;
+		width: 100%;
+		margin: 1.2rem 0;
+		padding: 0.5rem;
+		border: none;
+		outline: none;
+		background-color: transparent;
+		border-bottom: 1.5px solid #ecaf4e;
+
+		&::placeholder {
+			color: #fff;
+		}
+	}
+
+	button {
+		width: 40%;
+		background-color: #fff;
+		color: rgba(0, 0, 0, 0.7);
+		letter-spacing: 0.5px;
+		border: none;
+		font-size: 1.2rem;
+		font-weight: 300;
+		text-transform: capitalize;
+		margin-top: 1rem;
+	}
+}
+
+.address {
+	background-color: #000;
+
+	img {
+		height: 620px;
+	}
+
+	p,
+	a {
+		color: #545454;
+	}
+
+	a {
+		display: block;
+		margin: 1rem 0;
+		font-size: 1.1rem;
+	}
+
+	i {
+		display: inline-block;
+		margin-right: 0.8rem;
+	}
+}
+
+//map
+
+.map {
+	margin: 0 auto;
+	padding: 5rem 0;
+	max-width: 80rem;
+}

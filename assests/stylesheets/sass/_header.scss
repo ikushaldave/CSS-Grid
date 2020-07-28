@@ -1,7 +1,6 @@
 .header {
 	position: absolute;
 	top: 0;
-	bottom: 0;
 	left: 0;
 	right: 0;
 	padding: 20px 0;
@@ -21,8 +20,8 @@
 		font-size: 14px;
 		text-transform: uppercase;
 	}
+}
 
-	.active {
-		color: #ecaf4f;
-	}
+.active {
+	color: #ecaf4f;
 }

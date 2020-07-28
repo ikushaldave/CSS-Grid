@@ -150,6 +150,11 @@ body {
   font: 300 1rem/1.8 "Open Sans", sans-serif;
 }
 
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 .flex {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -161,6 +166,9 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .col-1-2 {
@@ -182,6 +190,10 @@ body {
 
 .span-2 {
   grid-column: span 2;
+}
+
+.span-4 {
+  grid-column: span 4;
 }
 
 img {
@@ -243,95 +255,9 @@ a {
   border-radius: 40px;
 }
 
-.reach-us {
-  background-color: #fc683e;
-}
-
-.reach-us h2,
-.reach-us p,
-.reach-us input,
-.reach-us textarea,
-.reach-us a {
-  color: #fff;
-  font-family: "Open Sans", sans-serif;
-}
-
-.contact-form form {
-  margin-top: 3rem;
-}
-
-.contact-form input,
-.contact-form textarea {
-  font-size: 1.1rem;
-  width: 100%;
-  margin: 1.2rem 0;
-  padding: 0.5rem;
-  border: none;
-  outline: none;
-  background-color: transparent;
-  border-bottom: 1.5px solid #ecaf4e;
-}
-
-.contact-form input::-webkit-input-placeholder,
-.contact-form textarea::-webkit-input-placeholder {
-  color: #fff;
-}
-
-.contact-form input:-ms-input-placeholder,
-.contact-form textarea:-ms-input-placeholder {
-  color: #fff;
-}
-
-.contact-form input::-ms-input-placeholder,
-.contact-form textarea::-ms-input-placeholder {
-  color: #fff;
-}
-
-.contact-form input::placeholder,
-.contact-form textarea::placeholder {
-  color: #fff;
-}
-
-.contact-form button {
-  width: 40%;
-  background-color: #fff;
-  color: rgba(0, 0, 0, 0.7);
-  letter-spacing: 0.5px;
-  border: none;
-  font-size: 1.2rem;
-  font-weight: 300;
-  text-transform: capitalize;
-  margin-top: 1rem;
-}
-
-.address {
-  background-color: #000;
-}
-
-.address img {
-  height: 620px;
-}
-
-.address p,
-.address a {
-  color: #545454;
-}
-
-.address a {
-  display: block;
-  margin: 1rem 0;
-  font-size: 1.1rem;
-}
-
-.address i {
-  display: inline-block;
-  margin-right: 0.8rem;
-}
-
 .header {
   position: absolute;
   top: 0;
-  bottom: 0;
   left: 0;
   right: 0;
   padding: 20px 0;
@@ -353,7 +279,7 @@ a {
   text-transform: uppercase;
 }
 
-.header .active {
+.active {
   color: #ecaf4f;
 }
 
@@ -527,5 +453,111 @@ a {
 
 .my-education {
   background-color: #ecaf4e;
+}
+
+.reach-us {
+  background-color: #fc683e;
+}
+
+.reach-us h2,
+.reach-us p,
+.reach-us input,
+.reach-us textarea,
+.reach-us a {
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+}
+
+.contact-form form {
+  margin-top: 3rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  font-size: 1.1rem;
+  width: 100%;
+  margin: 1.2rem 0;
+  padding: 0.5rem;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  border-bottom: 1.5px solid #ecaf4e;
+}
+
+.contact-form input::-webkit-input-placeholder,
+.contact-form textarea::-webkit-input-placeholder {
+  color: #fff;
+}
+
+.contact-form input:-ms-input-placeholder,
+.contact-form textarea:-ms-input-placeholder {
+  color: #fff;
+}
+
+.contact-form input::-ms-input-placeholder,
+.contact-form textarea::-ms-input-placeholder {
+  color: #fff;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #fff;
+}
+
+.contact-form button {
+  width: 40%;
+  background-color: #fff;
+  color: rgba(0, 0, 0, 0.7);
+  letter-spacing: 0.5px;
+  border: none;
+  font-size: 1.2rem;
+  font-weight: 300;
+  text-transform: capitalize;
+  margin-top: 1rem;
+}
+
+.address {
+  background-color: #000;
+}
+
+.address img {
+  height: 620px;
+}
+
+.address p,
+.address a {
+  color: #545454;
+}
+
+.address a {
+  display: block;
+  margin: 1rem 0;
+  font-size: 1.1rem;
+}
+
+.address i {
+  display: inline-block;
+  margin-right: 0.8rem;
+}
+
+.map {
+  margin: 0 auto;
+  padding: 5rem 0;
+  max-width: 80rem;
+}
+
+footer {
+  padding: 8rem;
+  font-size: 1.25rem;
+  text-align: center;
+  color: #545454;
+}
+
+.social-connect {
+  margin-top: 2rem;
+}
+
+.social-connect a {
+  margin: 0 2rem;
 }
 /*# sourceMappingURL=main.css.map */

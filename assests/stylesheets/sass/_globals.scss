@@ -26,13 +26,18 @@ body {
 	grid-column: span $num;
 }
 
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
 //flex
 
 .flex {
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: space-between;
-	// align-items: center;
+	align-items: center;
 }
 
 .col-1-2 {
@@ -51,6 +56,10 @@ body {
 
 .span-2 {
 	@include grid-span(2);
+}
+
+.span-4 {
+	@include grid-span(4);
 }
 
 // additional

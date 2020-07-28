@@ -14,19 +14,21 @@
 <body>
 
     <header class="header">
-        <div class="grid justify-align-center">
-            <a class="brand-logo span-2" href="#">
-                <h2>Stimulus</h2>
-            </a>
-            <nav class="nav span-2">
-                <ul class="nav-items flex">
-                    <li class="nav-item"><a class="active" href="#">Home</a></li>
-                    <li class="nav-item"><a href="#">About Me</a></li>
-                    <li class="nav-item"><a href="#">Experiences</a></li>
-                    <li class="nav-item"><a href="#">Testimonials</a></li>
-                    <li class="nav-item"><a href="#">Contact</a></li>
-                </ul>
-            </nav>
+        <div class="container">
+            <div class="flex">
+                <a class="brand-logo span-2" href="#">
+                    <h2>Stimulus</h2>
+                </a>
+                <nav class="nav span-2">
+                    <ul class="nav-items flex">
+                        <li class="nav-item"><a class="active" href="#">Home</a></li>
+                        <li class="nav-item"><a href="#">About Me</a></li>
+                        <li class="nav-item"><a href="#">Experiences</a></li>
+                        <li class="nav-item"><a href="#">Testimonials</a></li>
+                        <li class="nav-item"><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
     </header>
 
@@ -162,36 +164,56 @@
             </figure>
         </section>
 
-        <section class="reach-us grid justify-align-center">
-            <div class="contact-form span-2 padding">
-                <h2>Say hello..</h2>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <section class="reach-us">
+            <div class="reach-us grid justify-align-center">
+                <div class="contact-form span-2 padding">
+                    <h2>Say hello..</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
 
-                <form action="#">
-                    <input type="text" placeholder="Your Name" name="name">
-                    <input type="text" placeholder="Your Email" name="name">
-                    <textarea name="message" placeholder="Write your message..." rows="5"></textarea>
-                    <button class="btn">Send</button>
-                </form>
-            </div>
-            <div class="address span-2 grid">
-                <figure class="span-2">
-                    <img src="./assests/images/contact-img.jpg" alt="contact-img">
-                </figure>
-                <div class="address__text span-2 padding">
-                    <h2>Visit my office</h2>
-                    <p>456 New Street 22000, New York City, USA</p>
-                    <div class="contact">
-                        <h2>Contact.</h2>
-                        <a href="tel:+0123 456"><i class="fas fa-phone-volume"></i> 01-0110-0220</a>
-                        <a href="mailto:hello@company.co"><i class="fas fa-envelope-square"></i> hello@company.co</a>
-                        <a href="#"><i class="fas fa-globe-europe"></i> company.co</a>
+                    <form action="#">
+                        <input type="text" placeholder="Your Name" name="name">
+                        <input type="text" placeholder="Your Email" name="name">
+                        <textarea name="message" placeholder="Write your message..." rows="5"></textarea>
+                        <button class="btn">Send</button>
+                    </form>
+                </div>
+                <div class="address span-2 grid">
+                    <figure class="span-2">
+                        <img src="./assests/images/contact-img.jpg" alt="contact-img">
+                    </figure>
+                    <div class="address__text span-2 padding">
+                        <h2>Visit my office</h2>
+                        <p>456 New Street 22000, New York City, USA</p>
+                        <div class="contact">
+                            <h2>Contact.</h2>
+                            <a href="tel:+0123 456"><i class="fas fa-phone-volume"></i> 01-0110-0220</a>
+                            <a class="active" href="mailto:hello@company.co"><i class="fas fa-envelope-square"></i>
+                                hello@company.co</a>
+                            <a href="#"><i class="fas fa-globe-europe"></i> company.co</a>
+                        </div>
                     </div>
                 </div>
+            </div>
+            <div class="map">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3375.919684030994!2d76.35140991510998!3d32.206394781148006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391b530e24726e0d%3A0x71ff0cae0784712d!2sAltCampus%20Services%20Pvt.%20Ltd!5e0!3m2!1sen!2sin!4v1595936261375!5m2!1sen!2sin"
+                    width="100%" height="600" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+                    tabindex="0"></iframe>
             </div>
         </section>
 
     </main>
+
+    <footer>
+        <small>Copyright &copy; 2016 Your Company | Design: <a href="#" class="active">templated.co</a></small>
+        <div class="social-connect">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-google-plus-g"></i></a>
+            <a href="#"><i class="fab fa-dribbble"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </footer>
 </body>
 
 </html>
