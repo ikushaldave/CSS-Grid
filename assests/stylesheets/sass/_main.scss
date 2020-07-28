@@ -36,6 +36,13 @@
 .my-skills {
 	background-color: #ecaf4e;
 
+	h3,
+	span {
+		font-weight: 600;
+		color: #000;
+		margin-bottom: 0.5rem;
+	}
+
 	h2,
 	h3,
 	p,
@@ -43,39 +50,27 @@
 		color: #fff;
 	}
 
-	h3 {
-		font-weight: 600;
-		color: #000;
-		margin-bottom: 0.5rem;
-	}
-
-	img {
-		height: 350px;
-	}
-
 	.progress-bar {
 		margin-bottom: 1rem;
-	}
-
-	.total-indicator {
-		width: 100%;
-		background-color: #fff;
 	}
 
 	.fd,
 	.bp,
 	.hc {
-		width: 90%;
+		width: 100%;
 		height: 2.5px;
-		background-color: #000;
+	}
+
+	.fd {
+		background: linear-gradient(to right, #000 90%, #fff 90%);
 	}
 
 	.bp {
-		width: 70%;
+		background: linear-gradient(to right, #000 70%, #fff 70%);
 	}
 
 	.hc {
-		width: 80%;
+		background: linear-gradient(to right, #000 80%, #fff 80%);
 	}
 }
 
@@ -155,10 +150,10 @@
 
 	& > div {
 		margin-top: 1rem;
+	}
 
-		& > div {
-			margin-left: 2rem;
-		}
+	.details {
+		margin-left: 2rem;
 	}
 
 	i {
@@ -230,7 +225,7 @@
 	background-color: #000;
 
 	img {
-		height: 620px;
+		height: 650px;
 	}
 
 	p,

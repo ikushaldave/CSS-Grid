@@ -136,7 +136,7 @@ table {
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-size: 15px;
+  font-size: 16px;
 }
 
 *,
@@ -153,6 +153,7 @@ body {
 .container {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 1rem;
 }
 
 .flex {
@@ -199,6 +200,7 @@ body {
 img {
   display: block;
   width: 100%;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -260,13 +262,17 @@ a {
   top: 0;
   left: 0;
   right: 0;
-  padding: 20px 0;
 }
 
 .header .brand-logo {
   font-size: 1.6rem;
   font-weight: 600;
   text-shadow: 2px 2px 0 rgba(255, 255, 255, 0.2);
+}
+
+.header #hamburger,
+.header .bar {
+  display: none;
 }
 
 .header .nav-item {
@@ -319,6 +325,13 @@ a {
   background-color: #ecaf4e;
 }
 
+.my-skills h3,
+.my-skills span {
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 0.5rem;
+}
+
 .my-skills h2,
 .my-skills h3,
 .my-skills p,
@@ -326,39 +339,30 @@ a {
   color: #fff;
 }
 
-.my-skills h3 {
-  font-weight: 600;
-  color: #000;
-  margin-bottom: 0.5rem;
-}
-
-.my-skills img {
-  height: 350px;
-}
-
 .my-skills .progress-bar {
   margin-bottom: 1rem;
-}
-
-.my-skills .total-indicator {
-  width: 100%;
-  background-color: #fff;
 }
 
 .my-skills .fd,
 .my-skills .bp,
 .my-skills .hc {
-  width: 90%;
+  width: 100%;
   height: 2.5px;
-  background-color: #000;
+}
+
+.my-skills .fd {
+  background: -webkit-gradient(linear, left top, right top, color-stop(90%, #000), color-stop(90%, #fff));
+  background: linear-gradient(to right, #000 90%, #fff 90%);
 }
 
 .my-skills .bp {
-  width: 70%;
+  background: -webkit-gradient(linear, left top, right top, color-stop(70%, #000), color-stop(70%, #fff));
+  background: linear-gradient(to right, #000 70%, #fff 70%);
 }
 
 .my-skills .hc {
-  width: 80%;
+  background: -webkit-gradient(linear, left top, right top, color-stop(80%, #000), color-stop(80%, #fff));
+  background: linear-gradient(to right, #000 80%, #fff 80%);
 }
 
 .work {
@@ -440,7 +444,7 @@ a {
   margin-top: 1rem;
 }
 
-.experience > div > div, .education > div > div {
+.experience .details, .education .details {
   margin-left: 2rem;
 }
 
@@ -521,7 +525,7 @@ a {
 }
 
 .address img {
-  height: 620px;
+  height: 650px;
 }
 
 .address p,
@@ -547,17 +551,103 @@ a {
 }
 
 footer {
-  padding: 8rem;
+  padding: 8rem 0;
   font-size: 1.25rem;
   text-align: center;
   color: #545454;
 }
 
+footer .flex {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .social-connect {
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 .social-connect a {
-  margin: 0 2rem;
+  margin: 0 1.25rem;
+}
+
+@media screen and (max-width: 1000px) {
+  .grid {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+  .header {
+    position: static;
+  }
+  .header .brand-logo,
+  .header .bar {
+    position: relative;
+    z-index: 1;
+  }
+  .header .bar {
+    display: block;
+    font-size: 1.5rem;
+  }
+  .header .nav {
+    display: none;
+    padding: 5rem;
+  }
+  .header .nav .flex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+  }
+  .header .nav .nav-item {
+    margin-left: 0;
+    margin: 2rem 0;
+  }
+  .header .nav a {
+    font-size: 1.2rem;
+    color: rgba(0, 0, 0, 0.8);
+    font-weight: 600;
+  }
+  .header #hamburger:checked ~ .nav {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+  .header #hamburger:checked ~ .bar .fa-bars:before {
+    content: "\f00d";
+  }
+  .work {
+    grid-column: 1 / -1;
+  }
+  .experience, .education {
+    padding: 2.5rem;
+  }
+  .experience .flex, .education .flex {
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+  }
+  .experience .details, .education .details {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 80%;
+            flex: 0 1 80%;
+    margin-left: 0;
+  }
+  .experience .details h4, .education .details h4 {
+    font-size: 1.2rem;
+  }
+  
+  .experience i,
+  .education i {
+    font-size: 2rem;
+  }
+  .experience .time-period, .education .time-period {
+    margin-left: 0.1rem;
+  }
 }
 /*# sourceMappingURL=main.css.map */

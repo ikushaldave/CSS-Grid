@@ -1,0 +1,83 @@
+@media screen and (max-width: 1000px) {
+	.grid {
+		@include grid(2, 1fr);
+	}
+
+	.header {
+		position: static;
+
+		.brand-logo,
+		.bar {
+			position: relative;
+			z-index: 1;
+		}
+
+		.bar {
+			display: block;
+			font-size: 1.5rem;
+		}
+
+		.nav {
+			display: none;
+			padding: 5rem;
+
+			.flex {
+				flex-flow: column wrap;
+			}
+
+			.nav-item {
+				margin-left: 0;
+				margin: 2rem 0;
+			}
+
+			a {
+				font-size: 1.2rem;
+				color: rgba(0, 0, 0, 0.8);
+				font-weight: 600;
+			}
+		}
+
+		#hamburger:checked ~ .nav {
+			display: inline-block;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			background-color: rgba(255, 255, 255, 0.9);
+		}
+
+		#hamburger:checked ~ .bar .fa-bars:before {
+			content: "\f00d";
+		}
+	}
+
+	.work {
+		grid-column: 1 / -1;
+	}
+
+	.experience {
+		padding: 2.5rem;
+
+		.flex {
+			align-items: stretch;
+		}
+
+		.details {
+			flex: 0 1 80%;
+			margin-left: 0;
+
+			h4 {
+				font-size: 1.2rem;
+			}
+		}
+
+		i {
+			font-size: 2rem;
+		}
+
+		.time-period {
+			margin-left: 0.1rem;
+		}
+	}
+}
