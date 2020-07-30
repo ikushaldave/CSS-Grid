@@ -181,20 +181,12 @@ body {
 .grid {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[4];
-      grid-template-columns: repeat(4, 1fr);
+  -ms-grid-columns: (minmax(320px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 }
 
 .justify-align-center {
   place-items: center center;
-}
-
-.span-2 {
-  grid-column: span 2;
-}
-
-.span-4 {
-  grid-column: span 4;
 }
 
 img {
@@ -298,7 +290,7 @@ a {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  height: 740px;
+  height: 768px;
 }
 
 .hero .hero__heading {
@@ -524,10 +516,6 @@ a {
   background-color: #000;
 }
 
-.address img {
-  height: 650px;
-}
-
 .address p,
 .address a {
   color: #545454;
@@ -571,12 +559,9 @@ footer .flex {
   margin: 0 1.25rem;
 }
 
-@media screen and (max-width: 1000px) {
-  .grid {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: (1fr)[2];
-        grid-template-columns: repeat(2, 1fr);
+@media screen and (max-width: 800px) {
+  html {
+    font-size: 14px;
   }
   .header {
     position: static;
@@ -620,9 +605,6 @@ footer .flex {
   }
   .header #hamburger:checked ~ .bar .fa-bars:before {
     content: "\f00d";
-  }
-  .work {
-    grid-column: 1 / -1;
   }
   .experience, .education {
     padding: 2.5rem;

@@ -1,7 +1,11 @@
-@media screen and (max-width: 1000px) {
-	.grid {
-		@include grid(2, 1fr);
+@media screen and (max-width: 800px) {
+	html {
+		font-size: 14px;
 	}
+
+	// .grid {
+	// 	@include grid(2, 1fr);
+	// }
 
 	.header {
 		position: static;
@@ -53,7 +57,7 @@
 	}
 
 	.work {
-		grid-column: 1 / -1;
+		// grid-column: 1 / -1;
 	}
 
 	.experience {
