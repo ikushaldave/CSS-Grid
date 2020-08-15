@@ -81,7 +81,7 @@ Defines the element as a grid container and establishes a new grid formatting co
 }
 ```
 
-In above properties we don't see any changes to grid container and item it will seen as normal `html flow`. As we seen in `flex` when we change `display` property of parent it will make 'flex items' to flow in horizontal and taking a width of content.
+In above properties I don't see any changes to grid container and item it will seen as normal `html flow`. As I seen in `flex` when I change `display` property of parent it will make 'flex items' to flow in horizontal and taking a width of content.
 
 -   ### `grid-template-columns` &
 -   ### `grid-template-rows`
@@ -92,7 +92,7 @@ Defines the columns and rows of the grid with a space-separated list of values. 
 .container {
 	display: grid;
 	grid-template-columns: 100px 150px auto 50px;
-	grid-template-rows: 25% 100px 150px;
+	grid-template-rows: 50px 100px 150px;
 }
 ```
 
@@ -355,7 +355,7 @@ Implicit tracks get created when there are more grid items than cells in the gri
 
 ![Implicit Track and Explicit Track](./images/implicit-and-explicit-track.png)
 
-In above we have defined what should our row track size (100px 250px 50px) should be and column too. We had 20 grid items and some of grid items row track size defined automatically as size of content which is know as implicit track. And the rows size which defined is known as explicit track.
+In above I have defined what should our row track size (100px 250px 50px) should be and column too. I had 20 grid items and some of grid items row track size defined automatically as size of content which is know as implicit track. And the rows size which defined is known as explicit track.
 
 let see another example
 
@@ -378,7 +378,7 @@ The grid-auto-columns CSS property specifies the size of an implicitly-created g
 
 #### Example
 
-Let us understand the concept by an detail. In below code we are setting to explicit size to row track and this grid container has 20 items.
+Let us understand the concept by an detail. In below code I are setting to explicit size to row track and this grid container has 20 items.
 
 ```css
 .container {
@@ -391,7 +391,7 @@ Let us understand the concept by an detail. In below code we are setting to expl
 
 ![Explicit Grid Row](./images/explicit-grid-rows.png)
 
-In above we set explicit size to 3 rows only and other after taking size of content of we increase content any grid items after grid line 4 we will see that all other items of that grid row have same size.
+In above I set explicit size to 3 rows only and other after taking size of content of I increase content any grid items after grid line 4 I will see that all other items of that grid row have same size.
 
 ![Implicit Grid Row starting at grid-line 4 size increases as content increases](./images/implicit-grid-rows-sizes.png)
 
@@ -408,7 +408,7 @@ So what `grid-auto-rows` do is used to set an implicit track size of rows
 
 Similarly a `grid-auto-column` & refer [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-columns).
 
-> Note also we can create alternate like `grid-auto-rows: 150px 250px` in this 1st row will be 150px and 2nd one 250px and it repeat to all rows as alternate
+> Note also I can create alternate like `grid-auto-rows: 150px 250px` in this 1st row will be 150px and 2nd one 250px and it repeat to all rows as alternate
 
 -   ### `grid-auto-flow`
 
@@ -484,7 +484,7 @@ let see above code without dense
 
 ![grid-auto-flow without dense set to default](./images/grid-auto-flow-without-dense.png)
 
-Here we see that there is a hole before 1 because we made our `.item-1` to start at grid line of `2`.
+Here I see that there is a hole before 1 because I made our `.item-1` to start at grid line of `2`.
 
 ```css
 .container {
@@ -494,7 +494,7 @@ Here we see that there is a hole before 1 because we made our `.item-1` to start
 
 ![grid-auto-flow-dense](./images/grid-auto-flow-dense.png)
 
-Using a dense we seen that "dense" packing algorithm attempts to fill in holes earlier in the grid. So `item-2` filled that hole created by `item-1`.
+Using a dense I seen that "dense" packing algorithm attempts to fill in holes earlier in the grid. So `item-2` filled that hole created by `item-1`.
 
 > Note that dense only changes the visual order of your items and might cause them to appear out of order, which is bad for accessibility.
 
@@ -646,3 +646,106 @@ place-self sets both the align-self and justify-self properties in a single decl
 ```
 
 The first value sets align-self, the second value justify-self. If the second value is omitted, the first value is assigned to both properties.
+
+---
+
+## Special Functions and Keywords
+
+-   When sizing rows and columns, you can use all the lengths you are used to, like px, rem, %, etc, but you also have keywords like min-content, max-content, auto, and perhaps the most useful, fractional units. `grid-template-columns: 200px 1fr 2fr min-content;`
+
+-   You also have access to a function which can help set boundaries for otherwise flexible units. For example to set a column to be 1fr, but shrink no further than 200px: `grid-template-columns: 1fr minmax(200px, 1fr);`
+
+-   There is repeat() function, which saves some typing, like making 10 columns: `grid-template-columns: repeat(10, 1fr);`
+
+*   ### `minmax()` with `auto-fit` and `auto-fill`
+
+Combining all of these things can be extremely powerful, like `grid-template-columns: repeat(auto-fill, minmax(200px, 1fr))`; See the demo at the top of the page about “The Most Powerful Lines in Grid”.
+
+#### Example with `auto-fit`
+
+In this I will see demo with 4 Grid items.
+
+```css
+..container {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-auto-rows: 100px;
+	column-gap: 10px;
+}
+```
+
+Above code I made 4 explicit column of 1fr (fractional unit).
+
+![repeat function](./images/repeat-function.gif)
+
+I can see that repeat function take two option first is number of time I want to repeat and 2nd option what size to repeat here I said I want 4 column of 1 fr(which equally distribute in grid container) & I can also see that the following is not adaptive like in mobile version is still in one row and it will shrink till min-content.
+
+#### Know let see how can I make adaptive using repeat with `auto-fit` and `minmax` function
+
+for better demostration I only used 3 grid items & body have margin all side `50px`
+
+```css
+.container {
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+```
+
+Point to note:
+
+-   In minmax(200px, 1fr) Here I said I want our grid items minimum of 200px and max of 1fr so in desktop with auto-fit all grid items taking 1fr and in one row . Also in decreasing size I have notice when 3 grid item is unable to fit on screen size it had moved to bottom making it more adaptive to different screen size
+
+let do some what when items will be side by side
+
+-   `item-2` will be side of `item-1` I need min screen size of (200px \* 2 (for two grid item because min size of item is 200px) + 10px (column-gap) + 100px (margin left + margin right = 510px)) when it reach on size of 510px `item-2` will be side of `item-1`
+
+In `509px` all are in one column
+
+![auto-fit 509px](./images/auto-fit-509px.png)
+
+& in `510px` now `item-2` get enough space so it min size 200px can fit so it got side to `item-1`
+
+![auto-fit 510px](./images/auto-fit-510px.png)
+
+-   To `item-3` also to be in one row I need more `210px` (10px column-gap + 200 min size of `item-3`) Total min screen size to be `720px`.
+
+![auto-fit 719px](./images/auto-fit-719px.png)
+
+& in `720px` now `item-3` get enough space so it min size 200px can fit side by side.
+
+![auto-fit 720px](./images/auto-fit-720px.png)
+
+-   if I see increase more size then there is no more grid item to fit in now they will take `1fr` of grid container.
+
+![auto-fit](./images/auto-fit.gif)
+
+##### repeat with `auto-fill` and `minmax` function
+
+```css
+.container {
+	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+.item {
+	background-color: alice-blue;
+}
+```
+
+As I have 3 grid item (coloured one) it behave same as `autofit` till `930px` at this auto-fill find there space to fill a `pseudo item-4` so it created it.
+
+![auto-fill 929px](./images/auto-fill-929px.png)
+
+`auto-fill` at 930px I am just adding `210px` to previous 720px because of (200px of pseudo item min size + 10 column gap)
+
+![auto-fill 930px](./images/auto-fill-930px.png)
+
+It create `pseudo item-5` at `1140px`
+
+![auto-fill 1139px](./images/auto-fill-1139px.png)
+
+![auto-fill 1140px](./images/auto-fill-1140px.png)
+
+This will go on till I increase screen size.
+
+![auto-fill](./images/auto-fill.gif)
+
+Using any one `auto-fit` & `auto-fill` we can reduced a media query and make adaptive layout very fast..
